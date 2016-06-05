@@ -9,79 +9,91 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script><script src="js/app.js"></script>
 </head>
 <body>
-<h1>My Shopping eList</h1>
-<!-- <div id="editable-pick-list">  -->
- <div id="inventory-list">
-   <h2>Grocery Items</h2>
-   <p class="caption">Select an item to add it to your shopping list</p>
-   <div class="store-area-1">
+  <h1>My Shopping eList</h1>
+  <!-- <div id="editable-pick-list">  -->
+  <section id="inventory-list" class="list" data-list-number="0">
+    <h2>Grocery Items</h2>
+    <p class="caption">Select an item to add it to your shopping list</p>
+
+    <section class="store-area" data-category="fruits-and-veggies">
       <p><strong>Fruit and Veggies</strong></p>
       <ul>
-        <li>arugula</li>
-        <li>spinach</li>
-        <li>apples</li>
-        <li>bananas</li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>arugula<i class="move-right button fa fa-arrow-right"></i></li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>spinach<i class="move-right button fa fa-arrow-right"></i></li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>apples<i class="move-right button fa fa-arrow-right"></i></li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>bananas<i class="move-right button fa fa-arrow-right"></i></li>
       </ul>
-   </div>
-   <form>
-         <input type="text" maxlength="15" name="new-area1-item" id="new-area1-item" placeholder="New grocery item">
-         <input type="submit" value="Add">
-   </form>
-   <div class="store-area-2">
+      <form>
+        <input type="text" maxlength="15" name="new-area-item" placeholder="New grocery item">
+        <input type="submit" value="Add">
+      </form>
+    </section>
+
+    <section class="store-area" data-category="fish-poultry-meat">
       <p><strong>Fish, Poultry, Meat</strong></p>
       <ul>
-        <li>salmon</li>
-        <li>chicken sausage</li>
-        <li>ground turkey</li>
-        <li>chicken breasts</li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>salmon<i class="move-right button fa fa-arrow-right"></i></li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>chicken sausage<i class="move-right button fa fa-arrow-right"></i></li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>ground turkey<i class="move-right button fa fa-arrow-right"></i></li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>chicken breasts<i class="move-right button fa fa-arrow-right"></i></li>
       </ul>
-   </div>
-   <form>
-         <input type="text" maxlength="15" name="new-area2-item" id="new-area2-item" placeholder="New grocery item">
-         <input type="submit" value="Add">
-   </form>
-   <div class="store-area-3">
-    <p><strong>Eggs, Dairy, Juice</strong></p>
-    <ul>
-    </ul>
-   </div>
-   <form>
-         <input type="text" maxlength="15" name="new-area3-item" id="new-area3-item" placeholder="New grocery item">
-         <input type="submit" value="Add">
-   </form>
-</div>
- <!-- </div>  -->
- <!-- <div id="move-to-cart"> -->
-  <div id="shopping-list">
+      <form>
+        <input type="text" maxlength="15" name="new-area-item" placeholder="New grocery item">
+        <input type="submit" value="Add">
+      </form>
+    </section>
+
+    <section class="store-area" data-category="eggs-dairy-juice">
+      <p><strong>Eggs, Dairy, Juice</strong></p>
+      <ul>
+        <li><i class="move-left button fa fa-arrow-left" ></i>small brown eggs<i class="move-right button fa fa-arrow-right"></i></li>
+        <li><i class="move-left button fa fa-arrow-left" ></i>coconut almond milk<i class="move-right button fa fa-arrow-right"></i></li>
+      </ul>
+      <form>
+        <input type="text" maxlength="15" name="new-area-item" placeholder="New grocery item">
+        <input type="submit" value="Add">
+      </form>
+    </section>
+
+  </section>
+
+  <section id="shopping-list" class="list" data-list-number="1">
     <h2>What to Buy</h2>
     <!-- show selected items -->
-    <div class="store-area-1">
+    <section class="store-area" data-category="fruits-and-veggies">
       <ul>
       </ul>
-    </div>
-    <div class="store-area-2">
+    </section>
+    <section class="store-area" data-category="fish-poultry-meat">
       <ul>
       </ul>
-    </div>
-    <div class="store-area-3">
+    </section>
+    <section class="store-area" data-category="eggs-dairy-juice">
       <ul>
       </ul>
-    </div>
-  </div>
-  <div id="in-cart">
+    </section>
+  </section>
+
+  <section id="in-cart" class="list" data-list-number="2">
     <h2>In the Cart!</h2>
-      <hr>
-    <!-- show items moved from "to buy" to "in cart" -->
+    <section class="store-area" data-category="fruits-and-veggies">
       <ul>
       </ul>
-    <!--  <form action="/" method="post">
-        <button type="reset">Reset</button>
-      </form> -->
-  </div>
+    </section>
+    <section class="store-area" data-category="fish-poultry-meat">
+      <ul>
+      </ul>
+    </section>
+    <section class="store-area" data-category="eggs-dairy-juice">
+      <ul>
+      </ul>
+    </section>
+  </section>
 <!-- </div> -->
 </body>
 </html>

@@ -56,6 +56,9 @@ hr {
 #inventory-list ul {
   list-style: none;
 }
+#inventory-list .move-left {
+  display: none;
+}
 
 #shopping-list {
   border: 3px solid gray;
@@ -90,6 +93,9 @@ hr {
 #in-cart li {
   color: black;
 }
+#in-cart .move-right {
+  display: none;
+}
 /* create larger containers to manage floats */
 /*#editable-pick-list {
   border: 1px white;
@@ -115,38 +121,41 @@ hr {
   color: rgba(196, 196, 196, 1);
 }
 
-.store-area-1 {
-  border-top: 5px solid green;
+.store-area {
+  border-top-width: 5px;
+  border-top-style: solid;
   margin-top: 3px;
   margin-bottom: 10px;
 }
-.store-area-1 li {
-  border-bottom: 2px dotted green;
+.store-area li {
+  border-bottom-width: 2px;
+  border-bottom-style: dotted;
 }
 
-.store-area-2 {
-  border-top: 5px solid brown;
-  margin-top: 3px;
-  margin-bottom: 10px;
+.store-area[data-category='fruits-and-veggies'] {
+  border-top-color: green;
 }
-.store-area-2 li {
-    border-bottom: 2px dotted brown;
-}
-
-.store-area-3 {
-  border-top: 5px solid blue;
-  margin-top: 3px;
-  margin-bottom: 10px;
-}
-.store-area-3 li {
-  border-bottom: 2px dotted blue;
-}
-#new-area1-item {
+.store-area[data-category='fruits-and-veggies'] li {
   color: green;
+  border-bottom-color: green;
 }
-#new-area2-item {
+
+.store-area[data-category='fish-poultry-meat'] {
+  border-top-color: brown;
+}
+.store-area[data-category='fish-poultry-meat'] li {
   color: brown;
+  border-bottom-color: brown;
 }
-#new-area3-item {
+
+.store-area[data-category='eggs-dairy-juice'] {
+  border-top-color: blue;
+}
+.store-area[data-category='eggs-dairy-juice'] li {
   color: blue;
+  border-bottom-color: blue;
+}
+
+.move-right {
+  float: right;
 }
